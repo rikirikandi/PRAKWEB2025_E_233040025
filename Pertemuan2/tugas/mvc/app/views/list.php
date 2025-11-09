@@ -35,15 +35,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Loop untuk menampilkan setiap pengguna -->
                     <?php foreach ($users as $user): ?>
                     <tr>
                         <td><?= htmlspecialchars($user['id']); ?></td>
-                        <!-- Menampilkan nama dengan sanitasi HTML untuk keamanan -->
                         <td><?= htmlspecialchars($user['name']); ?></td>
-                        <!-- Menampilkan email dengan sanitasi HTML -->
                         <td><?= htmlspecialchars($user['email']); ?></td>
-                        <!-- Link untuk melihat detail pengguna berdasarkan ID -->
+                        
                         <td class="action-buttons">
                             <a href="index.php?action=detail&id=<?= $user['id']; ?>" class="btn btn-info btn-small">Detail</a>
                             <a href="index.php?action=edit&id=<?= $user['id']; ?>" class="btn btn-warning btn-small">Edit</a>
